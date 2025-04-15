@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Wikipedia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2px;
+            background-color: #fff;
+            color: #222;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 8px 15px;
+            width: 95%;
+            margin-left: 2%;
+            /* border: 2px solid black; */
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .wiki-logo {
+            width: 40px;
+        }
+
+        .logo-text {
+            line-height: 1.2;
+            font-size: 14px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            max-width: 500px;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 6px;
+            font-size: 14px;
+            border: 1px solid #aaa;
+            border-right: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .search-bar button {
+            padding: 6px 12px;
+            font-size: 14px;
+            border: 1px solid #aaa;
+            border-left: none;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .right-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .right-links a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+
+        .dots {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar-left {
+            width: 200px;
+            padding: 10px;
+            /* background: #f6f6f6; */
+            /* border: 1px solid #ddd; */
+            margin: 0 10px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .sidebar-left ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar-left li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar-left a {
+            text-decoration: none;
+            color: #0645ad;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .main-content h2 {
+            margin-top: 30px;
+        }
+
+        .main-content p {
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .main-image {
+            float: right;
+            margin: 10px 0 10px 20px;
+            width: 300px;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px #ccc;
+        }
+
+        .page-header {
+            padding: 16px 20px 4px;
+            border-bottom: 1px solid black;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .page-subline {
+            font-size: 12px;
+            color: #54595d;
+
+        }
+
+        .tabs-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 20px;
+            width: 60%;
+            margin: 0 auto 20px;
+            border-bottom: 1px solid black
+        }
+
+        .tabs-left span,
+        .tabs-left a {
+            margin-right: 20px;
+            font-size: 14px;
+            color: #0645ad;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .tabs-left .active {
+            font-weight: bold;
+            padding-bottom: 2px;
+        }
+
+        .tabs-right a {
+            margin-left: 15px;
+            font-size: 13px;
+            color: #0645ad;
+            text-decoration: none;
+        }
+
+        .sidebar-right {
+            width: 200px;
+            padding: 10px;
+            /* background: #f6f6f6; */
+            /* border: 1px solid #ddd;s */
+            margin: 0 10px;
+            height: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="left-section">
+            <span class="menu-icon">&#9776;</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/50px-Wikipedia-logo-v2.svg.png"
+                alt="Wikipedia Logo" class="wiki-logo">
+            <div class="logo-text">
+                <strong>Wikipedia</strong><br>
+                <small>The Free Encyclopedia</small>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search Wikipedia">
+            <button>Search</button>
+        </div>
+
+        <div class="right-links" style="color: blue;">
+            <a href="#">Donate</a>
+            <a href="#">Create account</a>
+            <a href="#">Log in</a>
+            <span class="dots">⋯</span>
+        </div>
+    </header>
+    <section class="page-header">
+        <h1>Nature</h1>
+        <div class="page-subline">From Wikipedia, the free encyclopedia</div>
+    </section>
+
+    <nav class="tabs-bar">
+        <div class="tabs-left">
+            <span class="active">Article</span>
+            <a href="#">Talk</a>
+        </div>
+        <div class="tabs-right">
+            <a href="#">Read</a>
+            <a href="#">View source</a>
+            <a href="#">View history</a>
+            <a href="#">Tools</a>
+        </div>
+    </nav>
+    <div class="container">
+        <aside class="sidebar-left">
+            <h3 style="border-bottom: 1px solid #ccc">Contents</h3>
+            <ul>
+                <li><a href="#earth">Earth</a></li>
+                <li><a href="#water">Water on Earth</a></li>
+                <li><a href="#eco">Ecosystems</a></li>
+                <li><a href="#life">Life</a></li>
+                <li><a href="#human">Human Interaction</a></li>
+                <li><a href="#climate">Climate</a></li>
+                <li><a href="#biodiversity">Biodiversity</a></li>
+                <li><a href="#natural-disasters">Natural Disasters</a></li>
+                <li><a href="#geology">Geology</a></li>
+                <li><a href="#space">Nature in Space</a></li>
+                <li><a href="#philosophy">Philosophy of Nature</a></li>
+                <li><a href="#conservation">Conservation</a></li>
+                <li><a href="#future">Future of Nature</a></li>
+                <li><a href="#biodiversity">Biodiversity</a></li>
+                <li><a href="#natural-disasters">Natural Disasters</a></li>
+                <li><a href="#geology">Geology</a></li>
+                <li><a href="#space">Nature in Space</a></li>
+                <li><a href="#philosophy">Philosophy of Nature</a></li>
+                <li><a href="#conservation">Conservation</a></li>
+                <li><a href="#future">Future of Nature</a></li>
+                <li><a href="#biodiversity">Biodiversity</a></li>
+                <li><a href="#natural-disasters">Natural Disasters</a></li>
+                <li><a href="#geology">Geology</a></li>
+                <li><a href="#space">Nature in Space</a></li>
+                <li><a href="#philosophy">Philosophy of Nature</a></li>
+                <li><a href="#conservation">Conservation</a></li>
+                <li><a href="#future">Future of Nature</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <img src="mountain.jpg" class="main-image">
+
+            <p>"Natural" redirects here. For other uses, see Natural (disambiguation) and Nature (disambiguation).</p>
+
+            <p><a href="#"><strong>Nature</strong></a> Nature is an inherent character or constitution, particularly of
+                the ecosphere or the universe as a whole. in this general sense nature refers to the laws, elements and
+                phenomena of the physical world, including life. <a href="">Although humans are part of nature,</a>
+                human activity or humans as a whole are often described as at times at odds, or outright separate and
+                even superior to nature, </p>
+
+            <p>During the advent of modern scientific method in the last several centuries, nature became the passive
+                reality, organized and moved by divine laws. (4) With the Industrial Revolution, nature increasingly
+                became seen as the part of reality deprived from intentional intervention: it was hence considered as
+                sacred by some traditions <a href="">(Rousseau, American transcendentalism)</a> or a mere decorum for
+                divine providence or human history (Hegel, Marx). However, a vitalist vision of nature, closer to the
+                pre-Socratic one, got reborn at the same time, especially after Charles Darwin. 121 </p>
+
+            <p>Within the various uses of the word today, "nature" often refers to geology and wildlife.
+                Nature can refer to the general realm of living beings, and in some cases to the processes associated
+                with inanimate objects the way that particular types of things exist and change of their own accord,
+                such as the weather and geology of the Earth. It is often taken to mean the "natural environment" or
+                wilderness-wild animals, rocks, forest, and in general those things that have not been substantially
+                altered by human intervention, or which persist despite human intervention. For example, manufactured
+                objects and human interaction generally are not considered part of nature, unless qualified as, for
+                example, "human nature" or <a href="">"the whole of nature"</a>. This more traditional concept of
+                natural things that can still be found today implies a distinction between the natural and the <a
+                    href="">artificial</a>, with the artificial being understood as that which has been brought into
+                being by a human consciousness or a human mind. Depending on the particular context, the term "natural"
+                might also be distinguished from the unnatural or the supernatural</p>
+
+        </main>
+        <aside class="sidebar-right">
+            <h2 style="border-bottom: 1px solid #ccc">Appearance</h2>
+            <h3>Text</h3>
+            <label><input type="radio" name="text-size" checked> Small</label><br>
+            <label><input type="radio" name="text-size"> standard</label><br>
+            <label><input type="radio" name="text-size"> Small</label><br>
+            <h4 style="border-bottom: 1px solid #ccc">Theme</h4>
+            <label><input type="radio" name="theme" checked> Light</label><br>
+            <label><input type="radio" name="theme"> Dark</label>
+            <h4 style="border-bottom: 1px solid #ccc">Color-beta</h4>
+            <label><input type="radio" name="theme" checked>Automatic</label><br>
+            <label><input type="radio" name="theme" checked> Light</label><br>
+            <label><input type="radio" name="theme"> Dark</label>
+        </aside>
+    </div>
+
+</body>
+
+</html>
